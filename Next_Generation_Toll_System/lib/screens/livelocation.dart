@@ -17,7 +17,7 @@ class _LiveLocationMapState extends State<LiveLocationMap> {
   Completer<GoogleMapController> _controller = Completer();
   List<LatLng> polylineCoordinates = [];
   PolylinePoints polylinePoints;
-  String googleAPIKey = 'AIzaSyBjuftnMzX35hrJbXFUKYSptaBF3X4IW9k';
+  String googleAPIKey = 'Your_API_Key';
   GoogleMapController mapController;
   LocationData currentLocation;
   LocationData destinationLocation;

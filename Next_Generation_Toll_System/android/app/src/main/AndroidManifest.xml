@@ -13,7 +13,7 @@
         android:label="Toll App"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyBjuftnMzX35hrJbXFUKYSptaBF3X4IW9k"/>
+               android:value="Your_API_Key"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
