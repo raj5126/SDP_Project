@@ -31,7 +31,6 @@ Stream<User> get user{
     try{
       AuthResult result = await _auth.signInWithEmailAndPassword(email:email,password: password);
       FirebaseUser user = result.user;
-      //print(user.email);
       return _userFromFirebaseUser(user);
       }
     catch(e)

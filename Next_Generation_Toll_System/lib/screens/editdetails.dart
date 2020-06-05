@@ -177,18 +177,13 @@ savejourneydate() async{
     s = prefs.getString('tolllist').substring(1,prefs.getString('tolllist').length-1);
     total = 0;
     i=0;
-    // s.split(',');
-    // print(s.split(', '));
     for (var doc in s.split(', ')){
-         //print(doc);
           Stream<QuerySnapshot> querysnapshot = Firestore.instance.collection('TollPrice').
               where('toll', isEqualTo: doc).where('vehicle_type',isEqualTo: value.toLowerCase()).snapshots();
-         // print(querysnapshot.length);
           querysnapshot.forEach((field){
           field.documents.asMap().forEach((index,data){
           int p = field.documents[index]['price'];
           total = total+p;
-         // print(p);
         });
         i+=1;
         if (i==s.split(', ').length){

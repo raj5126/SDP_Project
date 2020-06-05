@@ -58,8 +58,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/friend1.jpg
-    - assets/friend2.jpg
     - assets/destination_map_marker.png
     - assets/driving_pin.png
     - assets/dest.png

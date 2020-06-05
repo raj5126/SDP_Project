@@ -28,7 +28,7 @@ import 'package:paymentgateway/screens/editdetails.dart';
     Widget build(BuildContext context) {
       createMarker(context);
       return Scaffold(
-        body: Stack(
+        body: Stack(  
           children: <Widget>[
               Container(
                 padding: EdgeInsets.fromLTRB(0.0, 160.0, 0.0, 0.0),
@@ -250,7 +250,7 @@ gettolllocation(p) {
     for (var doc in p){
         tolls=[];
         Stream<QuerySnapshot> querysnapshot = Firestore.instance.collection('TollTax').
-              where('toll', isEqualTo: doc).snapshots();
+                                              where('toll', isEqualTo: doc).snapshots();
     querysnapshot.forEach((field) async {
         field.documents.asMap().forEach((index,data){
           var p = field.documents[index]['location'];
@@ -270,7 +270,9 @@ gettolllocation(p) {
 
 locateToll() {
     print('locate toll called..');
-    Stream<QuerySnapshot> querysnapshot = Firestore.instance.collection('Virtual_Tollbooth').where('source', isEqualTo : source.toLowerCase() ).where('destination', isEqualTo : dest.toLowerCase() ).snapshots();
+    Stream<QuerySnapshot> querysnapshot = Firestore.instance.collection('Virtual_Tollbooth').
+                                          where('source', isEqualTo : source.toLowerCase() ).
+                                          where('destination', isEqualTo : dest.toLowerCase() ).snapshots();
     querysnapshot.forEach((field){
       field.documents.asMap().forEach((index,data){
                     var p  = field.documents[index]['Toll'];

@@ -3,7 +3,7 @@ import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 import 'package:paymentgateway/models/pin_pill_info.dart';
-import 'package:paymentgateway/components/map_pin_pill.dart';
+//import 'package:paymentgateway/components/map_pin_pill.dart';
 import 'dart:async';
 
 class LiveLocationMap extends StatefulWidget {
@@ -100,9 +100,9 @@ void initState() {
                 _controller.complete(controller);
                 showPinsOnMap();
               }),
-          MapPinPillComponent(
-              pinPillPosition: pinPillPosition,
-              currentlySelectedPin: currentlySelectedPin)
+          //MapPinPillComponent(
+            //  pinPillPosition: pinPillPosition,
+              //currentlySelectedPin: currentlySelectedPin)
         ],)
     );
   }
